@@ -1,19 +1,21 @@
 #
-# Main Config File for Ximera compiling and publishing#
+# Main Config File for Ximera compiling and publishing
 #
 #  This file is used by the 'xmlatex' script that builds your project,
 #  and determines which version of Ximera to use and where to publish
 #
 #  (
 #   Note: in a Codespace, you're already running inside the container 
-#   set in .devcontainer/docker-compose.yml,
-#   and the XAKE_xxx variables ARE NOT used
+#   as set in .devcontainer/docker-compose.yml,
+#   and the XAKE_xxx variables ARE NOT used.
+#   Also the ximeraServer webserver is started automatically in a Codespace,
+#   and thus neither are the SERVER_xxx variables
 #  )
 #
 # version of Ximera xake container to use (with xmlatex)
 #
 : "${XAKE_BASE:=xake2024}"
-: "${XAKE_VERSION:=medium_d}"    % medium_d has xmPreamble/xmPictures/.xmKeyFile/improved errorhandling
+: "${XAKE_VERSION:=medium_d}"   # medium_d has xmPreamble/xmPictures/.xmKeyFile/improved errorhandling
 ## Alternatives:
 #: "${XAKE_VERSION:=full_d}"    # with texlive_full
 #: "${XAKE_BASE:=xake2023}"     # with older tex/xake
@@ -21,7 +23,10 @@
 ##
 ## For publishing  (to use a public server, you'll need to setup a GPG key)
 ##
-: "${XIMERA_NAME:=change_me_in_config_txt}"
+## The repo will be published ('served') to XIMERA_URL/XIMERA_NAME 
+##   XIMERA_NAME is thus the first part of the URL
+##  (Use no uppercase and no underscore _ in the XIMERA_NAME) 
+: "${XIMERA_NAME:=change-me-in-config-txt}"
 # : "${XIMERA_URL:=http://localhost:2000/}"    # default
 # : "${XIMERA_URL:=https://ximera.osu.edu}"
 # : "${XIMERA_URL:=https://set-p-dsb-zomercursus-latest.cloud-ext.icts.kuleuven.be/}"
@@ -29,6 +34,7 @@
 ##
 ## For a local ximeraserver (THIS IS NOT USED IN A CODESPACE: see .devcontainer/docker-compose.yml instead)
 ##
+## ( The docker container SERVER_NAME will be started from image SERVER_IMAGE listening on SERVER_PORT)
 : "${SERVER_PORT:=2000}"
 : "${SERVER_NAME:=ximeraserver}"
 : "${SERVER_IMAGE:=registry.gitlab.kuleuven.be/wet/ximera/ximeradocker:2.3_b}"
