@@ -1,10 +1,7 @@
 #   This is a DUMMY .ximeraserve file,
-#   that contains a DUMMY GPG key,
-#   suitable only for publishing to a *LOCAL* testserver.
+#   that contains a DUMMY GPG key to publish Ximera courses on LOCAL testserver(s).
 #
-#   For publishing to a *public* Ximeraserver, 
-#   you'll need a GPG_KEY_ID and GPG_KEY with your personal/project GPG key
-#   and replace (or somehow overwrite) this dummy key.
+#   Change the GPG_KEY_ID and GPG_KEY with your personal/project GPG key
 #
 #   *** DO NEVER COMMIT THE .ximeraserve WITH YOUR REAL KEY ***
 #
