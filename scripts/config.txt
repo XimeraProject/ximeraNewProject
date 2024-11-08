@@ -1,4 +1,15 @@
 #
+# Main Config File for Ximera compiling and publishing#
+#
+#  This file is used by the 'xmlatex' script that builds your project,
+#  and determines which version of Ximera to use and where to publish
+#
+#  (
+#   Note: in a Codespace, you're already running inside the container 
+#   set in .devcontainer/docker-compose.yml,
+#   and the XAKE_xxx variables ARE NOT used
+#  )
+#
 # version of Ximera xake container to use (with xmlatex)
 #
 : "${XAKE_BASE:=xake2024}"
@@ -9,13 +20,12 @@
 #: "${XAKE_VERSION:=v2.1.3_a}"  # obsolete
 
 #
-# For publishing  (you'll also need a GPG key in .ximeraserve)
+# For publishing  (to use a public server, you'll need to setup a GPG key)
 #
-: "${XIMERA_NAME:=firststeps24}"
-## : "${XIMERA_URL:=http://localhost:2000/}"
+: "${XIMERA_NAME:=change_me_in_config_txt}"
+## : "${XIMERA_URL:=http://localhost:2000/}"    # default
 ## : "${XIMERA_URL:=https://ximera.osu.edu}"
 ## : "${XIMERA_URL:=https://set-p-dsb-zomercursus-latest.cloud-ext.icts.kuleuven.be/}"
-## : "${XIMERA_URL:=https://set.kuleuven.be/voorkennis/}"
 
 #
 # For a local ximeraserver
@@ -31,6 +41,6 @@
 # : "${COMMAND:=./scripts/xmlatex.test}"
 #
 # for LOCALLY generated/tagged images, use:
-export DOCKER_REPO=" "
+# export DOCKER_REPO=" "
 # export XM_PUSH_FORCE=1
 # export XM_FROST_WITH_UNCOMMITTED_CHANGES=1
