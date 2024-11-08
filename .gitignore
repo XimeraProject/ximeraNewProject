@@ -5,13 +5,13 @@
 *.png
 *.pdf
 ## Don't ignore things in ./graphics 
-pictures/*
-!pictures/*.jpg
-!pictures/*.pdf
-!pictures/*.png
-!pictures/*.JPG
-!pictures/*.PDF
-!pictures/*.PNG
+xmPictures/*
+!xmPictures/*.jpg
+!xmPictures/*.pdf
+!xmPictures/*.png
+!xmPictures/*.JPG
+!xmPictures/*.PDF
+!xmPictures/*.PNG
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
