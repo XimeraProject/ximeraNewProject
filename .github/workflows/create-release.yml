@@ -23,11 +23,8 @@ jobs:
           zip -r ximera_setup_files.zip release_files/
 
       - name: Create Release and Upload Asset
-        uses: gh actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}  # Use the tag name to create the release
-          release_name: 'Release ${{ github.ref }}'
-          body: 'This release includes the config files vor Ximera development.'
-          files: ximera_setup_files.zip  # The file you want to upload as the release asset
+          files: xlmera_setup_files.zip  # The file you want to upload as the release asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication          
