@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Select Files to Include in the Release
         run: |
@@ -19,11 +19,13 @@ jobs:
           cp -r .vscode       release_files/
           cp -r .devcontainer release_files/
           cp -r scripts       release_files/
+          cp    .gitignore    release_files/
           
-          zip -r ximera_setup_files.zip release_files/
+          cd release_files
+          zip -rv ximera_setup_files.zip .
 
       - name: Create Release and Upload Asset
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: ximera_setup_files.zip  # The file you want to upload as the release asset
         env:
