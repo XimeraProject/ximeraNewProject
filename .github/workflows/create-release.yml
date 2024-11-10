@@ -22,7 +22,7 @@ jobs:
           cp    .gitignore    release_files/
           
           cd release_files
-          zip -rv ximera_setup_files.zip .
+          zip -v -r ../ximera_setup_files.zip .
 
       - name: Create Release and Upload Asset
         uses: softprops/action-gh-release@v2
