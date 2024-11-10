@@ -25,6 +25,6 @@ jobs:
       - name: Create Release and Upload Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: xlmera_setup_files.zip  # The file you want to upload as the release asset
+          files: ximera_setup_files.zip  # The file you want to upload as the release asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication          
