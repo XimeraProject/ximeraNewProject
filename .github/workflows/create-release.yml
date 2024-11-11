@@ -22,11 +22,14 @@ jobs:
           cp    .gitignore    release_files/
           
           cd release_files
-          zip -v -r ../ximera_setup_files.zip .
+          zip -v -r ../xmDevEnvFiles.zip .
+          tar -zcvf ../xmDevEnvFiles.tgz .
 
       - name: Create Release and Upload Asset
         uses: softprops/action-gh-release@v2
         with:
-          files: ximera_setup_files.zip  # The file you want to upload as the release asset
+          files: | 
+            xmDevEnvFiles.zip
+            xmDevEnvFiles.tgz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication          
