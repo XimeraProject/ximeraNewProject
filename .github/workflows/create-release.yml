@@ -18,7 +18,7 @@ jobs:
           mkdir release_files
           cp -r .vscode       release_files/
           cp -r .devcontainer release_files/
-          cp -r scripts       release_files/
+          cp -r xmScripts     release_files/
           cp    .gitignore    release_files/
           
           cd release_files
