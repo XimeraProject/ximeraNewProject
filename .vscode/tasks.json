@@ -97,7 +97,7 @@
     ],
     "options": {
         "env": {
-          "PATH": "/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:./xmScripts"  
+          "PATH": "${env:PATH}:./xmScripts"  
         }
       },    
 }
