@@ -79,6 +79,13 @@
                     "tooltip": "Serve this project."
                 },
                 {
+                    "task": "Update DevEnv",
+                    "label": "Update the build environment",
+                    "description": "Updates the docker-container, xmScripts en .vscode config",
+                    "problemMatcher": [],
+                },
+
+                {
                     "task": "Delete standard",
                     "label": "Delete all standard PDFs",
                     "problemMatcher": [],

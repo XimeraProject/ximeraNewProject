@@ -85,6 +85,12 @@
                 "clean"
             ],
         },
+        {
+            "label": "Update DevEnv",
+            "args": [
+                "updateDevEnv"
+            ],
+        },
     ],
     "inputs": [
         {
