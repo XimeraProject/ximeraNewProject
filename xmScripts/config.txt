@@ -1,20 +1,23 @@
 #
 # version of Ximera xake container to use (with xmlatex)
 #
-# : "${XAKE_BASE:=ximeralatex}"
-# : "${XAKE_VERSION:=v2.5.5}"
-
+#: "${XAKE_BASE:=ximeralatex}"
+: "${XAKE_VERSION:=v2.5.8}"
+# : "${XAKE_VERSION:=v2.5.8-full}"    # with texlive_full
 #
 #
-# For publishing locally, a default key in .xmKeyFile is sufficient.
-# For publishing to a publicly available website, you'll need proper keys.
-#      via Codespaces: connect keys via GitHub Codespaces Secrets
-#      on your PC:     set environment variables, or edit .xmKeyFile
+# For publishing you'll need a GPG Key
 # To generate a key-pair, fill in your name and email, and run 'xmlatex genKey'
+#      if there is no .xmKeyFile, and it is properly .gitignored, 
+#      then the new key will be stored in .xmKeyFile. This is sufficient for initial testing.
+#
+#      For use in Codespaces: paste the GPG_KEY and GPG_KEY_ID in GitHub Codespace Secrets
+#      For use in Github Actions: paste the GPG_KEY and GPG_KEY_ID in GitHub Action Secrets
+#      For use on your PC:  use the .xmKeyFile, or set the environment variables
 YOUR_NAME=""
 YOUR_EMAIL=""
-# !! Do NEVER commit real keys to the repo !!
-# !! DO NEVER SAVE THE KEYS THEMSELVES IN THIS FILE   !!
+# !! Do NOT commit a real key to the repo !!
+# !! DO NOT SAVE THE KEY IN THIS config.txt FILE   !!
 #
 
 ## : "${XIMERA_NAME:=myreponame}"
