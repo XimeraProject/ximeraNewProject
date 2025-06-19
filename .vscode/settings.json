@@ -59,7 +59,7 @@
             "alignment": "right",
             "task": "HTML",
             "description": "Create HTML of the current file.",
-            "tooltip": "Compile a HTML from the current file."
+            "tooltip": "Compile (and publish) HTML \nfrom the current file."
         },
         {
             "label": "SERVE",
