@@ -2,9 +2,9 @@
 
 Use this repository to create a new Ximera project by clicking the "Use This Template" button in the upper right hand corner.
 
-The key files for Ximera depoyment are: 
+The key files for Ximera deployment are: 
 - .vscode (contains our VS Code scripts)
-- xmScripts (Contains the scripts Ximera needs run)
+- xmScripts (contains a configfile, and the script 'xmlatex' that Ximera needs)
 - global.css (for look on the web)
 - .gitignore (update to the most recent version)
 - .devcontainer (Only if you wish to work in Codespace)
